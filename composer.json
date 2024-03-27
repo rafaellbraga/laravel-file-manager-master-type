@@ -1,11 +1,5 @@
 {
-    "name": "alexusmai/laravel-file-manager",
-    "description": "File manager for Laravel",
-    "keywords": [
-        "laravel",
-        "file",
-        "manager"
-    ],
+    "name": "rafaellbraga/laravel-file-manager-master-type",
     "authors": [
         {
             "name": "Aleksandr Manekin",
@@ -13,7 +7,7 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/alexusami/laravel-file-manager",
+    "homepage": "https://github.com/rafaellbraga/laravel-file-manager-master-type",
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {
@@ -27,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Alexusmai\\LaravelFileManager\\": "src"
+            "Rafaellbraga\\LaravelFileManagerMasterType\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Alexusmai\\LaravelFileManager\\FileManagerServiceProvider"
+                "Rafaellbraga\\LaravelFileManagerMasterType\\FileManagerServiceProvider"
             ]
         }
     }
