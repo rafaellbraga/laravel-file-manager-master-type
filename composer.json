@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rafaellbraga\\LaravelFileManagerMasterType\\FileManagerServiceProvider"
+                "Rafaellbraga\\LaravelFileManager\\FileManagerServiceProvider"
             ]
         }
     }
