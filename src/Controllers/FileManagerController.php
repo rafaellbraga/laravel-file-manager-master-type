@@ -8,6 +8,8 @@ use Alexusmai\LaravelFileManager\Events\DirectoryCreated;
 use Alexusmai\LaravelFileManager\Events\DirectoryCreating;
 use Alexusmai\LaravelFileManager\Events\DiskSelected;
 use Alexusmai\LaravelFileManager\Events\Download;
+use Alexusmai\LaravelFileManager\Events\FilePreview;
+use Alexusmai\LaravelFileManager\Events\FileStream;
 use Alexusmai\LaravelFileManager\Events\FileCreated;
 use Alexusmai\LaravelFileManager\Events\FileCreating;
 use Alexusmai\LaravelFileManager\Events\FilesUploaded;
@@ -28,6 +30,7 @@ use Illuminate\Routing\Controller;
 use Illuminate\View\View;
 use League\Flysystem\FilesystemException;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+
 
 class FileManagerController extends Controller
 {
@@ -238,7 +241,10 @@ class FileManagerController extends Controller
      * @return mixed
      */
     public function preview(RequestValidator $request): mixed
+
     {
+        event(new FilePreview($request));
+
         return $this->fm->preview(
             $request->input('disk'),
             $request->input('path')
@@ -339,6 +345,8 @@ class FileManagerController extends Controller
      */
     public function streamFile(RequestValidator $request): mixed
     {
+        event(new FileStream($request));
+
         return $this->fm->streamFile(
             $request->input('disk'),
             $request->input('path')
