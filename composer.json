@@ -21,13 +21,13 @@
     },
     "autoload": {
         "psr-4": {
-            "rafaellbraga\\LaravelFileManagerMasterType\\": "src"
+            "Alexusmai\\LaravelFileManager\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "rafaellbraga\\LaravelFileManagerMasterType\\FileManagerServiceProvider"
+                "Alexusmai\\LaravelFileManager\\FileManagerServiceProvider"
             ]
         }
     }
